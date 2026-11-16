@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOWKYLION MUSIC GALLERY</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #130e1c;
+    color: white;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(135deg, #51266f, #bd65a5, #21132e);
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+header p {
+    color: #f8eafa;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    padding: 35px 15px 10px;
+}
+
+.intro h2 {
+    color: #e8a8ff;
+    margin-bottom: 12px;
+}
+
+/* FILTER */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 25px 15px;
+}
+
+.filter-buttons button {
+    background: transparent;
+    color: white;
+    border: 1px solid #d28bea;
+    padding: 11px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active {
+    background: #b65bd2;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px #c66de855;
+}
+
+/* MUSIC CARDS */
+.music-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 15px 20px 55px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.music-card {
+    background: #251b30;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #44304f;
+    transition: 0.3s;
+}
+
+.music-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px #b65bd255;
+}
+
+.music-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.music-info {
+    padding: 18px;
+}
+
+.music-info h3 {
+    color: #e9b5ff;
+    margin-bottom: 10px;
+}
+
+.music-info p {
+    color: #cbbbd3;
+    font-size: 14px;
+    min-height: 38px;
+    margin-bottom: 15px;
+}
+
+.music-info a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #984bbd;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.music-info a:hover {
+    background: #d66bb7;
+}
+
+.music-card.hide {
+    display: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: #251b30;
+    padding: 25px;
+    color: #d5c3df;
+    line-height: 1.8;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .music-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .music-container {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 50px 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .music-card img {
+        height: 210px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎧 BOWKYLION</h1>
+    <p>MUSIC GALLERY | รวมเพลงเพราะ ๆ ของโบกี้ไลอ้อน</p>
+</header>
+
+<section class="intro">
+    <h2>WELCOME TO MY MUSIC WORLD 💜</h2>
+    <p>ค้นพบเพลงโปรดและเลือกฟังเพลงตามอารมณ์ที่คุณชอบ</p>
+</section>
+
+<!-- FILTER BUTTONS -->
+<div class="filter-buttons">
+    <button class="active" data-filter="all">ทั้งหมด</button>
+    <button data-filter="hit">เพลงฮิต</button>
+    <button data-filter="sad">เพลงเศร้า</button>
+    <button data-filter="love">เพลงรัก</button>
+</div>
+
+<!-- MUSIC GALLERY -->
+<main class="music-container">
+
+    <!-- เพลงที่ 1 -->
+    <div class="music-card" data-category="hit">
+        <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=600" alt="วาดไว้">
+        <div class="music-info">
+            <h3>วาดไว้ (recall)</h3>
+            <p>เพลงฮิตที่เต็มไปด้วยความทรงจำ</p>
+            <a href="https://www.youtube.com/results?search_query=BOWKYLION+วาดไว้" target="_blank">ฟังเพลง ▶</a>
+        </div>
+    </div>
+
+    <!-- เพลงที่ 2 -->
+    <div class="music-card" data-category="sad">
+        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=600" alt="ลงใจ">
+        <div class="music-info">
+            <h3>ลงใจ (Longjai)</h3>
+            <p>เพลงสำหรับคนที่ยังมีความรู้สึก</p>
+            <a href="https://www.youtube.com/results?search_query=BOWKYLION+ลงใจ" target="_blank">ฟังเพลง ▶</a>
+        </div>
+    </div>
+
+    <!-- เพลงที่ 3 -->
+    <div class="music-card" data-category="love">
+        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=600" alt="ยิ้มมา">
+        <div class="music-info">
+            <h3>ยิ้มมา (Crush)</h3>
+            <p>เพลงน่ารัก ๆ สำหรับคนกำลังมีความรัก</p>
+            <a href="https://www.youtube.com/results?search_query=BOWKYLION+ยิ้มมา" target="_blank">ฟังเพลง ▶</a>
+        </div>
+    </div>
+
+    <!-- เพลงที่ 4 -->
+    <div class="music-card" data-category="hit">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt="บานปลาย">
+        <div class="music-info">
+            <h3>บานปลาย (Best Wishes)</h3>
+            <p>อีกหนึ่งเพลงยอดนิยมของโบกี้ไลอ้อน</p>
+            <a href="https://www.youtube.com/results?search_query=BOWKYLION+บานปลาย" target="_blank">ฟังเพลง ▶</a>
+        </div>
+    </div>
+
+    <!-- เพลงที่ 5 -->
+    <div class="music-card" data-category="sad">
+        <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600" alt="คิดถึงแต่">
+        <div class="music-info">
+            <h3>คิดถึงแต่ (Untold)</h3>
+            <p>เพลงที่สื่อถึงความคิดถึงและความรู้สึก</p>
+            <a href="https://www.youtube.com/results?search_query=BOWKYLION+คิดถึงแต่" target="_blank">ฟังเพลง ▶</a>
+        </div>
+    </div>
+
+    <!-- เพลงที่ 6 แสนวิเศษ -->
+    <div class="music-card" data-category="love">
+        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600" alt="แสนวิเศษ">
+        <div class="music-info">
+            <h3>แสนวิเศษ</h3>
+            <p>เพลงที่มีบรรยากาศอบอุ่นและสดใส</p>
+            <a href="https://www.youtube.com/results?search_query=BOWKYLION+แสนวิเศษ" target="_blank">ฟังเพลง ▶</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 BOWKYLION MUSIC GALLERY</p>
+    <p>จัดทำขึ้นเพื่อการศึกษา</p>
+</footer>
+
+<!-- JAVASCRIPT FILTER -->
+<script>
+const buttons = document.querySelectorAll(".filter-buttons button");
+const cards = document.querySelectorAll(".music-card");
+
+buttons.forEach(button => {
+
+    button.addEventListener("click", function() {
+
+        buttons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        const filter = this.dataset.filter;
+
+        cards.forEach(card => {
+
+            const category = card.dataset.category;
+
+            if (filter === "all" || filter === category) {
+                card.classList.remove("hide");
+            } else {
+                card.classList.add("hide");
+            }
+
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>
